@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    tools:context="com.borreguin.tiendapp.Act_Details_all_accounts">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:id="@id/clientName"
+        android:gravity="left"
+        android:textSize="23dp"
+        android:textColor="@color/title"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="23dp"
+        android:textColor="@color/title"
+        android:textStyle="italic"
+        android:text="@string/last_account"
+        android:id="@+id/first_tag"
+        android:layout_below="@id/clientName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/first_tag"
+        android:layout_toRightOf="@id/first_tag"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:text="@string/value"
+        android:textSize="22sp"
+        android:id="@+id/txt_total"
+        android:textColor="@color/black"/>
+
+
+    <GridView
+        android:numColumns="auto_fit"
+        android:gravity="center"
+        android:columnWidth="100dp"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/first_tag"
+        android:layout_above="@+id/navigation"
+        android:stretchMode="columnWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grid_item_values"
+        android:background="@drawable/gridview_border"
+        />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+</RelativeLayout>

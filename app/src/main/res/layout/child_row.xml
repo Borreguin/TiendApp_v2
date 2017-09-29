@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.borreguin.tiendapp.Act_SearchClient">
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/generic_icon"
+            android:id="@+id/child_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/child_text"
+            android:paddingLeft="40sp"
+            android:textSize="20sp"
+            android:paddingTop="2sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toRightOf="@+id/child_icon"
+            android:text="@string/name"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textAppearance="?android:textAppearanceMedium"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_debt"
+            android:paddingLeft="40sp"
+            android:paddingTop="25sp"
+            android:textSize="19sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toRightOf="@+id/child_icon"
+            android:text="@string/debt"
+            android:textStyle="italic"
+            android:textAppearance="?android:textAppearanceMedium"
+            />
+
+
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btnDeleteClient"
+            android:background="@drawable/trash_20"/>
+
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toLeftOf="@+id/btnDeleteClient"
+            android:background="@drawable/edit_20"
+            android:id="@+id/btnEditClient"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_rely"
+            android:paddingLeft="5sp"
+            android:paddingRight="20sp"
+            android:paddingTop="25sp"
+            android:textSize="18sp"
+            android:layout_toLeftOf="@+id/btnEditClient"
+            android:text="@string/yes"
+            android:textAppearance="?android:textAppearanceMedium"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rely_tag"
+            android:layout_toLeftOf="@+id/txt_rely"
+            android:paddingTop="25sp"
+            android:textSize="18sp"
+            android:text="@string/rely"
+            android:textAppearance="?android:textAppearanceMedium"
+            />
+
+</RelativeLayout>

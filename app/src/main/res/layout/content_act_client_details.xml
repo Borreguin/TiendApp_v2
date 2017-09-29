@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.borreguin.tiendapp.Act_ClientAccount"
+    tools:showIn="@layout/activity_act_client_details">
+
+
+
+    <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:id="@id/clientName"
+                    android:textSize="23dp"
+                    android:textColor="@color/title"
+                    android:textStyle="bold|italic"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:id="@id/description"
+                    android:textSize="21dp"
+                    android:layout_below="@id/clientName"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+                <Button
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/past"
+                    android:id="@+id/btn_pastDetails"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/btn_addDeft"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:background="@android:drawable/ic_input_add"
+
+                    />
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/btn_lessDeft"
+                    android:layout_toRightOf="@+id/btn_addDeft"
+                    android:background="@drawable/minus"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/btn_lessDeft"
+                    android:id="@+id/txt_enterDeft"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginLeft="20sp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|center"
+                    android:hint="@string/zero"
+                    android:textColorHint="@color/gray"
+                    android:inputType="numberDecimal|numberSigned"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_addDetails"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:height="60dp"
+                    android:width="30dp"
+                    android:background="@drawable/add_details"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total"
+                    android:id="@+id/total_tag"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_total"
+                    android:text="@string/zero"
+                    android:textSize="23sp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_toRightOf="@+id/total_tag"/>
+
+
+
+                <GridView
+                    android:numColumns="auto_fit"
+                    android:gravity="center"
+                    android:columnWidth="100dp"
+                    android:layout_margin="5dp"
+                    android:layout_above="@+id/navigation"
+                    android:layout_below="@id/total_tag"
+                    android:stretchMode="columnWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/grid_item_values"
+                    android:background="@drawable/gridview_border"
+                    />
+
+
+                <android.support.design.widget.BottomNavigationView
+                    android:id="@+id/navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="?android:attr/windowBackground"
+                    app:menu="@menu/navigation" />
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.borreguin.tiendapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/shop"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/shop"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Search application -->
+        <meta-data
+            android:name="android.app.searchable"
+            android:resource="@xml/searchable" />
+        <!-- Search application -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Act_SearchClient"
+            android:label="@string/searchClient"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".Act_NewClient"
+            android:label="@string/title_activity_act__new_client"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.borreguin.tiendapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Act_Delete_Client"
+            android:label="@string/title_activity_act__delete__client"
+            android:parentActivityName=".Act_SearchClient">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.borreguin.tiendapp.Act_SearchClient" />
+        </activity>
+        <activity
+            android:name=".Act_Edit_client"
+            android:label="@string/title_activity_act_edit_client"
+            android:parentActivityName=".Act_SearchClient">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.borreguin.tiendapp.Act_SearchClient" />
+        </activity>
+        <activity
+            android:name=".Act_ClientAccount"
+            android:label="@string/title_activity_act__client_details"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".Act_SearchClient"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.borreguin.tiendapp.Act_SearchClient" />
+        </activity>
+        <activity
+            android:name=".Act_DetailsNote"
+            android:label="@string/NoteDetails"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".Act_ClientAccount"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.borreguin.tiendapp.Act_DetailsNote" />
+        </activity>
+        <activity
+            android:name=".Act_Edit_Note"
+            android:label="@string/title_activity_act__edit__note"
+            android:parentActivityName=".Act_ClientAccount">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.borreguin.tiendapp.Act_ClientAccount" />
+        </activity>
+        <activity
+            android:name=".Act_Details_all_accounts"
+            android:label="@string/title_activity_act__details_all"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".Act_ClientAccount">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.borreguin.tiendapp.Act_ClientAccount" />
+        </activity>
+        <activity
+            android:name=".Act_See_Note"
+            android:label="@string/title_activity_act__details_all"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".Act_ClientAccount">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.borreguin.tiendapp.Act_ClientAccount" />
+        </activity>
+        <activity
+            android:name=".Act_New_Account"
+            android:label="@string/title_activity_act__new__account"
+            android:parentActivityName=".Act_ClientAccount">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.borreguin.tiendapp.Act_ClientAccount" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.borreguin.tiendapp.Act_DetailsNote">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:id="@id/clientName"
+        android:textSize="23dp"
+        android:textColor="@color/title"
+        android:textStyle="bold|italic"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/btn_addDeft"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@android:drawable/ic_input_add"
+
+            />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/btn_lessDeft"
+            android:layout_toRightOf="@+id/btn_addDeft"
+            android:background="@drawable/minus"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn_lessDeft"
+            android:id="@+id/txt_enterDeft"
+            android:layout_marginTop="5sp"
+            android:layout_marginLeft="20sp"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical|center"
+            android:hint="@string/zero"
+            android:inputType="numberDecimal|numberSigned"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+
+        <EditText
+            android:id="@+id/edt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="232dp"
+            android:layout_marginRight="232dp"
+            android:ems="10"
+            android:clickable="true"
+            android:textSize="22sp"
+            android:focusable="false"
+            android:inputType="date" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_description"
+            android:textColor="@color/black"
+            android:layout_below="@+id/edt_date"
+            android:id="@+id/txt_desc"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <com.borreguin.tiendapp.Utilities.LinedEditText
+            android:id="@+id/txt_notes"
+            android:layout_width="match_parent"
+            android:padding="8sp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txt_desc"
+            android:gravity="start"
+            android:textSize="22sp"
+            android:layout_above="@+id/navigation"
+            android:scrollbars="vertical"
+            android:hint="@string/Enter_here"
+            android:background="@drawable/background_note"
+            android:inputType="textMultiLine|textAutoComplete"/>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/navigation" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
